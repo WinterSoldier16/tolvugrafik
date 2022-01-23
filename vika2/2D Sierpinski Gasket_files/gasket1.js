@@ -31,8 +31,8 @@ window.onload = function init()
     var v = add( vertices[0], vertices[2] );
     var p = scale( 0.25, add( u, v ) );
     
-    // Dæmi 1. a
-    //var p = vec2(100, 100);
+    // Dæmi 1. a:
+    var p = vec2(100, 100);
 
     // And, add our initial point into our array of points
 
@@ -43,15 +43,16 @@ window.onload = function init()
     // last point and a randomly chosen vertex
 
     for ( var i = 0; points.length < NumPoints; ++i ) {
-        //var j = Math.floor(Math.random() * 3);
-        var ran = Math.random() * 100;
-        if (ran <= 90) {
-            var j = 0;
-        } else if (90 < ran && ran < 95) {
-            var j = 1;
-        } else if (95 < ran && ran < 100) {
-            var j = 2;
-        }
+        var j = Math.floor(Math.random() * 3);
+        // Dæmi 1. b:
+        // var ran = Math.random() * 100;
+        // if (ran <= 90) {
+        //     var j = 0;
+        // } else if (90 < ran && ran < 95) {
+        //     var j = 1;
+        // } else if (95 < ran && ran < 100) {
+        //     var j = 2;
+        // }
         p = add( points[i], vertices[j] );
         p = scale( 0.5, p );
         points.push( p );
